@@ -8,7 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ejemplo Bootstrap</title>
-
+    
+	<link href="../css/miestilo.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!--BoostrapValidator-->
@@ -18,6 +19,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/pygments-manni.css" />
     <!-- Add fancyBox -->
     <link rel="stylesheet" href="../fancyBox/source/jquery.fancybox.css" type="text/css" media="screen"/>
+    
     
   </head>
   <body>

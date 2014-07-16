@@ -27,10 +27,10 @@
         <input type="text" class="form-control" id="apellido" name="apellido" placeholder="apellido">
       </div><div class="form-group">
         <label for="abstract">Peso:</label>
-        <input type="text" class="form-control" id="peso" name="peso" placeholder="Peso">
+        <input type="number" class="form-control" id="peso" name="peso" placeholder="Peso">
       </div><div class="form-group">
         <label for="estatura">Estatura:</label>
-        <input type="text" class="form-control" id="estatura" name="estatura" placeholder="Estatura">
+        <input type="number" class="form-control" id="estatura" name="estatura" placeholder="Estatura">
       </div>                           
       <div class="form-group">
         <label for="foto">Foto:</label>
@@ -38,7 +38,7 @@
       </div>
       <div class="form-group">
         <label for="edad">Edad:</label>
-        <textarea type="text" class="form-control" id="edad" name="edad" placeholder="Edad"></textarea>
+        <input type="number" class="form-control" id="edad" name="edad" placeholder="Edad">
       </div>              
       <div class="form-group">
         <label for="id_equipo">Equipo:</label>
