@@ -67,11 +67,11 @@ class Revista extends Modelo{
 
         $er = new Er();
         
-        if ( !$er->valida_imagen($valor) )
+        if ( !$er->valida_imagen($valor['name']) )
 		{
             $this->errores[] = "Este archivo (".$valor.") no es valido";
         }      
-        $this->portada = trim($valor);
+        $this->portada = trim($valor['name']);
         
     }
 

@@ -8,16 +8,17 @@
   include ('../../controllers/RevistaController.php');
   include ('../../libs/Er.php');
   include ('../layouts/header2.php');
-    
+  
+  
   if(isset($_POST['nombre'])){	
 	$revistaC = new RevistaController();
-	$revistaC->insertaRevista($_POST); 
+	$revistaC->insertaRevista($_POST,$_FILES); 
   }
   ?>
   <div class="row">
 	<div class="col-lg-4 col-lg-offset-4">
 	<div><h2>Registro de Revistas</h2></div><br/>		
-    <form role="form" id="registro_revista" action="" method="post">
+    <form role="form" id="registro_revista" action="" method="post"  enctype="multipart/form-data">
       <div class="form-group">
         <label for="nombre">Nombre:</label>
         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
