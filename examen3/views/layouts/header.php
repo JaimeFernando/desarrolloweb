@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <title>Revista</title>
 
-    
+    <link href="../css/miestilo.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <!--BoostrapValidator-->
@@ -51,11 +51,11 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registrar <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="../articulo/from_articulo.php">Articulo</a></li>
-                    <li><a href="../autor/from_autor.php">Autor</a></li>
-                    <li><a href="../indice/from_indice.php">Indice</a></li>
-                    <li><a href="../revista/form_revista.php">Revista</a></li>
-                    <li><a href="../status/from_status.php">Status</a></li>
+                    <li><a class="fancybox" data-fancybox-type="iframe" href="../articulo/from_articulo.php">Articulo</a></li>
+                    <li><a class="fancybox" data-fancybox-type="iframe" href="../autor/from_autor.php">Autor</a></li>
+                   <li><a class="fancybox" data-fancybox-type="iframe" href="../indice/from_indice.php">Indice</a></li>
+                    <li><a class="fancybox" data-fancybox-type="iframe" href="../revista/form_revista.php">Revista</a></li>
+                    <li><a class="fancybox" data-fancybox-type="iframe" href="../status/from_status.php">Status</a></li>
                     <li class="divider"></li>
                     <li class="dropdown-header">Nav header</li>
                     <li><a href="#">Separated link</a></li>

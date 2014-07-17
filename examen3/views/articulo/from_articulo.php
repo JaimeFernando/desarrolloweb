@@ -1,6 +1,18 @@
 <?php 
-  session_start();
-  include ('../layouts/header.php');
+ session_start();
+  include ('../../libs/adodb5/adodb-pager.inc.php');
+  include ('../../libs/adodb5/adodb.inc.php');
+  include ('../../models/Conexion.php');
+  include ('../../models/Modelo.php');
+  include ('../../models/Articulo.php');
+  include ('../../controllers/ArticuloController.php');
+  include ('../../libs/Er.php');
+  include ('../layouts/header2.php');
+    
+  if(isset($_POST['nombre'])){	
+	$articuloC = new ArticuloController();
+	$articuloC->insertaArticulo($_POST); 
+  }
   ?>
   <div class="row">
 	<div class="col-lg-4 col-lg-offset-4">
@@ -30,8 +42,8 @@
       </div>                           
       <div class="form-group">
         <label for="fecha_creacion">Fecha de Creaci&oacute;n</label> 
-           <div class='input-group date' id='datetimepicker1'>                    
-               <input type='text' class="form-control" />
+           <div class='input-group date' id='datetimepicker1' data-date-format="YYYY/MM/DD">                    
+               <input type='text' class="form-control" id="fecha_creacion" name="fecha_creacion" />
                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
                    </span>
                </div>
@@ -76,4 +88,4 @@
   
   
   
-  <?php include ('../layouts/footer.php'); ?>
+  <?php include ('../layouts/footer2.php'); ?>

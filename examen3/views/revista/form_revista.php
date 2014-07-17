@@ -1,6 +1,18 @@
 <?php 
-  session_start();
-  include ('../layouts/header.php');
+ session_start();
+  include ('../../libs/adodb5/adodb-pager.inc.php');
+  include ('../../libs/adodb5/adodb.inc.php');
+  include ('../../models/Conexion.php');
+  include ('../../models/Modelo.php');
+  include ('../../models/Revista.php');
+  include ('../../controllers/RevistaController.php');
+  include ('../../libs/Er.php');
+  include ('../layouts/header2.php');
+    
+  if(isset($_POST['nombre'])){	
+	$revistaC = new RevistaController();
+	$revistaC->insertaRevista($_POST); 
+  }
   ?>
   <div class="row">
 	<div class="col-lg-4 col-lg-offset-4">
@@ -16,8 +28,8 @@
         </div>
         <div class="form-group">
         <label for="fecha">Fecha:</label> 
-           <div class='input-group date' id='datetimepicker2'>                    
-               <input type='date' class="form-control" id="fecha" name="fecha"/>
+           <div class='input-group date' id='datetimepicker2' data-date-format="YYYY/MM/DD">                    
+               <input type='text' class="form-control" id="fecha" name="fecha"/>
                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
                    </span>
                </div>
@@ -73,4 +85,4 @@
   
   
   
-  <?php include ('../layouts/footer.php'); ?>
+  <?php include ('../layouts/footer2.php'); ?>

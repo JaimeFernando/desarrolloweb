@@ -1,6 +1,18 @@
 <?php 
-  session_start();
-  include ('../layouts/header.php');
+ session_start();
+  include ('../../libs/adodb5/adodb-pager.inc.php');
+  include ('../../libs/adodb5/adodb.inc.php');
+  include ('../../models/Conexion.php');
+  include ('../../models/Modelo.php');
+  include ('../../models/Autor.php');
+  include ('../../controllers/AutorController.php');
+  include ('../../libs/Er.php');
+  include ('../layouts/header2.php');
+    
+  if(isset($_POST['nombre'])){	
+	$autorC = new AutorController();
+	$autorC->insertaAutor($_POST); 
+  }
   ?>
   <div class="row">
 	<div class="col-lg-4 col-lg-offset-4">
@@ -33,4 +45,4 @@
   
   
   
-  <?php include ('../layouts/footer.php'); ?>
+  <?php include ('../layouts/footer2.php'); ?>

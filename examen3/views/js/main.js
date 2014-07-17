@@ -336,3 +336,4 @@ $(document).ready(function() {
 		 $('#datetimepicker1').datetimepicker({language: 'es'});
 		 $('#datetimepicker2').datetimepicker({language: 'es'});
 	});
+	

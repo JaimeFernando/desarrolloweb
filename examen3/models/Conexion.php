@@ -14,9 +14,9 @@ class Conexion {
     
     function Conexion(){
         $this->db = ADONewConnection('mysql');
-        $this->db->debug = true;
+        $this->db->debug = false;
 			       //ip     user      pass    bd
-        $this->db->Connect('localhost','fernando10301993','Margaiz@10301993','fifa');
+        $this->db->Connect('localhost','root','root','revista');
 
     }
     
