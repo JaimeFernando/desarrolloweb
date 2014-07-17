@@ -5,18 +5,23 @@
 		function __construct(){
 			 
 		}
-		public function insertaPais($datos){
-			echo "<pre>datos:";
+		public function insertaPais($datos,$archivos){
+			/*echo "<pre>datos:";
 			print_r ($datos);
-			echo "</pre>";
+			echo "</pre>";*/
 			$pais = new Pais();
 			$pais->set_nombre($datos['nombre']);
-			$pais->set_nombre($datos['bandera']);
-			$pais->set_nombre($datos['id_continente']);	
+			$pais->set_bandera($archivos['bandera']);
+			$pais->set_continente($datos['id_continente']);	
 			
 			if(count($pais->errores)>0){
-				print_r($pais->errores);	
+				print_r($pais->errores);
+				die();	
 			}
+			else{
+				move_uploaded_file($archivos['bandera']['tmp_name'],
+				"../img/banderas/".$archivos['bandera']['name']);
+			}	
 		}	
 		
 

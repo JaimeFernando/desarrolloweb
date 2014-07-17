@@ -11,13 +11,13 @@
     
   if(isset($_POST['nombre'])){	
 	$paisC = new PaisController();
-	$paisC->insertaPais($_POST); 
+	$paisC->insertaPais($_POST,$_FILES); 
   }
 ?>
 <div class="row">
 	<div class="col-lg-4 col-lg-offset-4"><br/><br/><br/>
 	<div><h2>Registro de Paises</h2></div><br/>		
-    <form role="form" id="registro_pais" action="" method="post">
+    <form role="form" id="registro_pais" action="" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label for="nombre">Nombre:</label>
         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">

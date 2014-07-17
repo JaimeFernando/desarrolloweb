@@ -5,18 +5,23 @@
 		function __construct(){
 			 
 		}
-		public function insertaEquipo($datos){
-			echo "<pre>datos:";
+		public function insertaEquipo($datos,$archivos){
+			/*echo "<pre>datos:";
 			print_r ($datos);
-			echo "</pre>";
+			echo "</pre>";*/
 			$equipo = new Equipo();
 			$equipo->set_nombre($datos['nombre']);
-			$equipo->set_nombre($datos['id_pais']);
-			$equipo->set_nombre($datos['escudo']);	
+			$equipo->set_id_pais($datos['id_pais']);
+			$equipo->set_escudo($archivos['escudo']);	
 			
 			if(count($equipo->errores)>0){
-				print_r($equipo->errores);	
+				print_r($equipo->errores);
+				die();	
 			}
+			else{
+				move_uploaded_file($archivos['escudo']['tmp_name'],
+				"../img/escudos/".$archivos['escudo']['name']);
+			}	
 		}	
 		
 

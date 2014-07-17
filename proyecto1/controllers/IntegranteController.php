@@ -5,21 +5,26 @@
 		function __construct(){
 			 
 		}
-		public function insertaIntegrante($datos){
-			echo "<pre>datos:";
+		public function insertaIntegrante($datos,$archivos){
+			/*echo "<pre>datos:";
 			print_r ($datos);
-			echo "</pre>";
+			echo "</pre>";*/
 			$integrante = new Integrante();
 			$integrante->set_nombre($datos['nombre']);
-			$integrante->set_nombre($datos['apellido']);
-			$integrante->set_nombre($datos['peso']);	
-			$integrante->set_nombre($datos['estatura']);
-			$integrante->set_nombre($datos['foto']);
-			$integrante->set_nombre($datos['edad']);
-			$integrante->set_nombre($datos['id_equipo']);	
+			$integrante->set_apellido($datos['apellido']);
+			$integrante->set_peso($datos['peso']);	
+			$integrante->set_estatura($datos['estatura']);
+			$integrante->set_foto($archivos['foto']);
+			$integrante->set_edad($datos['edad']);
+			$integrante->set_id_equipo($datos['id_equipo']);	
 			
 			if(count($integrante->errores)>0){
-				print_r($integrante->errores);	
+				print_r($integrante->errores);
+				die();	
+			}
+			else{
+				move_uploaded_file($archivos['foto']['tmp_name'],
+				"../img/fotointegrantes/".$archivos['foto']['name']);
 			}
 		}	
 		

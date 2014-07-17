@@ -11,7 +11,7 @@
     
   if(isset($_POST['nombre'])){	
 	$equipoC = new EquipoController();
-	$equipoC->insertaEquipo($_POST); 
+	$equipoC->insertaEquipo($_POST,$_FILES); 
   }
  
   
@@ -19,7 +19,7 @@
 <div class="row">
 	<div class="col-lg-4 col-lg-offset-4"><br/><br/><br/>
         <div><h2 align="center">Registro de Equipos</h2></div><br/>		
-        <form role="form" id="registro_equipo" action="" method="post">
+        <form role="form" id="registro_equipo" action="" method="post" enctype="multipart/form-data">
           <div class="form-group">
             <label for="nombre">Nombre:</label>
             <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">

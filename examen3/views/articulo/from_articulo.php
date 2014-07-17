@@ -11,13 +11,13 @@
     
   if(isset($_POST['nombre'])){	
 	$articuloC = new ArticuloController();
-	$articuloC->insertaArticulo($_POST); 
+	$articuloC->insertaArticulo($_POST,$_FILES); 
   }
   ?>
   <div class="row">
 	<div class="col-lg-4 col-lg-offset-4">
 	<div><h2>Registro de Articulos</h2></div><br/>		
-    <form role="form" id="registro_articulo" action="" method="post">
+    <form role="form" id="registro_articulo" action="" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label for="nombre">Nombre:</label>
         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">

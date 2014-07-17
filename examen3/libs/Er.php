@@ -167,6 +167,19 @@ class Er
 		     return false;
 		} 
 	}
+	
+	//Verificar si es archivo de imagen
+	public function valida_pdf($valor)
+	{
+		$exp_reg = '%\.(pdf)$%i'; 
+		if (preg_match($exp_reg, $valor))
+		{
+		     return true;
+		} else
+		{ 
+		     return false;
+		} 
+	}
 
 
 }

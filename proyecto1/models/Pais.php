@@ -38,17 +38,37 @@ class Pais extends Modelo{
     } 
 
     public function set_nombre($valor){
-
-        $er = new Er();
-        
-        if ( !$er->valida_nombre($valor) )
-		{
-            $this->errores[] = "Este nombre (".$valor.") no es valido";
-        }      
         $this->nombre = trim($valor);
         
     }
+    //-----------------------------------------------------------------------------------
+    
+    public function get_bandera(){
+        return $this->bandera;
+    } 
 
+    public function set_bandera($valor){
+
+        $er = new Er();
+        
+        if ( !$er->valida_imagen($valor['name']) )
+		{
+            $this->errores[] = "Este nombre (".$valor.") no es valido";
+        }      
+        $this->bandera = trim($valor['name']);
+        
+    }
+    //-----------------------------------------------------------------------------------
+    
+    public function get_continente(){
+        return $this->continente;
+    } 
+
+    public function set_continente($valor){
+
+        $this->continente = trim($valor);
+        
+    }	
 
 
 

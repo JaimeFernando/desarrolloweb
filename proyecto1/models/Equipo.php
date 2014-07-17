@@ -37,30 +37,35 @@ class Equipo extends Modelo{
 
     public function set_nombre($valor){
 
-        $er = new Er();
-        
-        if ( !$er->valida_nombre($valor) )
-		{
-            $this->errores[] = "Este nombre (".$valor.") no es valido";
-        }      
+              
         $this->nombre = trim($valor);
+        
+    }
+	  //--------------------------------------------------------------------------------------------------
+    public function get_id_pais(){
+        return $this->id_pais;
+    } 
+
+    public function set_id_pais($valor){
+  
+        $this->id_pais = trim($valor);
         
     }
 
 	//--------------------------------------------------------------------------------------------------
-    public function get_foto(){
+    public function get_escudo(){
         return $this->escudo;
     } 
 
-    public function set_foto($valor){
+    public function set_escudo($valor){
 
         $er = new Er();
         
-        if ( !$er->valida_imagen($valor) )
+        if ( !$er->valida_imagen($valor['name']) )
 		{
             $this->errores[] = "Este imagen (".$valor.") no es valida";
         }      
-        $this->escudo = trim($valor);
+        $this->escudo = trim($valor['name']);
         
     }
    
