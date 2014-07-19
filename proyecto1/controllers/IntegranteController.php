@@ -23,6 +23,7 @@
 				die();	
 			}
 			else{
+				$integrante->inserta($integrante->get_atributos());
 				move_uploaded_file($archivos['foto']['tmp_name'],
 				"../img/fotointegrantes/".$archivos['foto']['name']);
 			}

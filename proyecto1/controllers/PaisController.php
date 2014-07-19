@@ -19,9 +19,13 @@
 				die();	
 			}
 			else{
+				$pais->inserta($pais->get_atributos());
 				move_uploaded_file($archivos['bandera']['tmp_name'],
 				"../img/banderas/".$archivos['bandera']['name']);
+				
+				
 			}	
+			
 		}	
 		
 

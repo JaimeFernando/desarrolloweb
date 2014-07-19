@@ -150,7 +150,7 @@ class Articulo extends Modelo{
         
         if ( !$er->valida_pdf($valor['name']) )
 		{
-            $this->errores[] = "Este archivo (".$valor.") no es valido";
+            $this->errores[] =  "Este archivo (".$valor['name'].") no es valido";
         }      
         $this->archivo_pdf = trim($valor['name']);
         

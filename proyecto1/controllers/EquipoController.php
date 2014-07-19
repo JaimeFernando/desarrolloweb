@@ -19,6 +19,7 @@
 				die();	
 			}
 			else{
+				$equipo->inserta($equipo->get_atributos());
 				move_uploaded_file($archivos['escudo']['tmp_name'],
 				"../img/escudos/".$archivos['escudo']['name']);
 			}	

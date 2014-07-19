@@ -31,7 +31,7 @@ class ADODB_Pager {
     var $linksPerPage=10; // number of links per page in navigation bar
     var $showPageLinks;
 
-	var $gridAttributes = 'width=100% border=1 bgcolor=white';
+	var $gridAttributes = 'class=table';
 
 	// Localize text strings here
 	var $first = '<code>|&lt;</code>';
@@ -274,7 +274,7 @@ class ADODB_Pager {
 
 	//------------------------------------------------------
 	// override this to control overall layout and formating
-	function RenderLayout($header,$grid,$footer,$attributes='border=1 bgcolor=beige')
+	function RenderLayout($header,$grid,$footer,$attributes='class=table')
 	{
 		echo "<table ".$attributes."><tr><td>",
 				$header,

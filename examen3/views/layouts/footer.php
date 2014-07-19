@@ -1,6 +1,12 @@
     </div><br/><br/><br/> <!--Contenedor-->
     <div class="container" align="center">
-    <div><h3>Elaborado por: Jaime Fernando Margaiz Ramírez</h3></div>
+    <div><h3>Margaiz<br><span calss="glyphicon glyphicon-registration-mark"></span></h3></div>
+    	<?php echo date ('Y');?>
+			<pre>
+        		<?php
+					print_r($_SESSION);
+				?>
+            </pre>
     </div>
     
      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

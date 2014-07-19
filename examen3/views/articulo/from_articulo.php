@@ -7,7 +7,7 @@
   include ('../../models/Articulo.php');
   include ('../../controllers/ArticuloController.php');
   include ('../../libs/Er.php');
-  include ('../layouts/header2.php');
+  include ('../layouts/header.php');
     
   if(isset($_POST['nombre'])){	
 	$articuloC = new ArticuloController();
@@ -88,4 +88,4 @@
   
   
   
-  <?php include ('../layouts/footer2.php'); ?>
+  <?php include ('../layouts/footer.php'); ?>

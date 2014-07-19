@@ -7,7 +7,7 @@
   include ('../../models/Autor.php');
   include ('../../controllers/AutorController.php');
   include ('../../libs/Er.php');
-  include ('../layouts/header2.php');
+  include ('../layouts/header.php');
     
   if(isset($_POST['nombre'])){	
 	$autorC = new AutorController();
@@ -45,4 +45,4 @@
   
   
   
-  <?php include ('../layouts/footer2.php'); ?>
+  <?php include ('../layouts/footer.php'); ?>

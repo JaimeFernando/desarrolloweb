@@ -8,7 +8,7 @@
   include ('../../models/Indice.php');
   include ('../../controllers/IndiceController.php');
   include ('../../libs/Er.php');
-  include ('../layouts/header2.php');
+  include ('../layouts/header.php');
     
   if(isset($_POST['titulo'])){	
 	$indiceC = new IndiceController();
@@ -51,4 +51,4 @@
   
   
   
-  <?php include ('../layouts/footer2.php'); ?>
+  <?php include ('../layouts/footer.php'); ?>

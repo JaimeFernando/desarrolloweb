@@ -7,7 +7,7 @@
   include ('../../models/Status.php');
   include ('../../controllers/StatusController.php');
   include ('../../libs/Er.php');
-  include ('../layouts/header2.php');
+  include ('../layouts/header.php');
     
   if(isset($_POST['status'])){	
 	$statusC = new StatusController();
@@ -38,4 +38,4 @@
   
   
   
-  <?php include ('../layouts/footer2.php'); ?>
+  <?php include ('../layouts/footer.php'); ?>

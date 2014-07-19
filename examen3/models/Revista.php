@@ -69,7 +69,7 @@ class Revista extends Modelo{
         
         if ( !$er->valida_imagen($valor['name']) )
 		{
-            $this->errores[] = "Este archivo (".$valor.") no es valido";
+            $this->errores[] = "Este archivo (".$valor['name'].") no es valido";
         }      
         $this->portada = trim($valor['name']);
         
@@ -169,7 +169,7 @@ class Revista extends Modelo{
 	
 			//-----------------------------------------------------------------------------------
     
-    public function get_dicertorio(){
+    public function get_directorio(){
         return $this->directorio;
     } 
 
@@ -181,7 +181,7 @@ class Revista extends Modelo{
 	
 				//-----------------------------------------------------------------------------------
     
-    public function get_editoria(){
+    public function get_editorial(){
         return $this->editorial;
     } 
 
@@ -198,7 +198,7 @@ class Revista extends Modelo{
 
     public function set_status($valor){
       
-        $this->id_tatus= trim($valor);
+        $this->id_status= trim($valor);
         
     }
     

@@ -48,14 +48,15 @@
                 <li><a href="../site/inicio.php">Inicio</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <?php if (!isset($_SESSION['user']) ){?> 
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registrar <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a class="fancybox" data-fancybox-type="iframe" href="../articulo/from_articulo.php">Articulo</a></li>
-                    <li><a class="fancybox" data-fancybox-type="iframe" href="../autor/from_autor.php">Autor</a></li>
-                   <li><a class="fancybox" data-fancybox-type="iframe" href="../indice/from_indice.php">Indice</a></li>
-                    <li><a class="fancybox" data-fancybox-type="iframe" href="../revista/form_revista.php">Revista</a></li>
-                    <li><a class="fancybox" data-fancybox-type="iframe" href="../status/from_status.php">Status</a></li>
+                    <li><a class="fancybox" href="../articulo/from_articulo.php">Articulo</a></li>
+                    <li><a class="fancybox" href="../autor/from_autor.php">Autor</a></li>
+                   <li><a class="fancybox" href="../indice/from_indice.php">Indice</a></li>
+                    <li><a class="fancybox" href="../revista/form_revista.php">Revista</a></li>
+                    <li><a class="fancybox" href="../status/from_status.php">Status</a></li>
                     <li class="divider"></li>
                     <li class="dropdown-header">Nav header</li>
                     <li><a href="#">Separated link</a></li>
@@ -63,6 +64,17 @@
                   </ul>
                 </li>
               </ul>
+              <ul class="nav navbar-nav navbar-right">
+				  <?php if (!isset($_SESSION['user']) ){?> 
+              	<li><a href="../site/login.php">
+                	<span class="glyphicon glyphicon-log-in"></span>Entrar</a>
+                </li>
+                <?php } else{ ?>
+                <li><a href="../site/logout.php">
+                	<span class="glyphicon glyphicon-log-in"></span>Salir</a>
+                </li>
+                <?php } ?>
+              </ul> 
             </div>
           </div>
         </div>
